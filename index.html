@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello, world!</title>
+  <title>Linh's Class Schedule</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="stylesheet" type="text/css" href="index.css" />
@@ -14,8 +14,8 @@
 <body>
 
     <div id="total__cont">
-        <h1 >Which day do you need?</h1>
-        <div>
+        <h1 class="title" id="title" >Linh's Class Schedule</h1>
+        <div id="day__cont" class="day__cont day_hold">
             <button class="monday myButton" id="monday">Monday</button>
             <button class="tuesday myButton" id="tuesday">Tuesday</button>
             <button class="wednesday myButton" id="wednesday">Wednesday</button>
@@ -23,7 +23,13 @@
             <button class="friday myButton" id="friday">Friday</button>
             <button class="saturday myButton" id="saturday">Saturday</button>
             <button class="sunday myButton" id="sunday">Sunday</button>
-            <button class=" none " id="sunday">Reset</button>
+          
+        </div>
+        <div id="reset__cont" class="none day_hold">
+
+          <button class=" myButton " id="reset">Reset</button>
+
+
         </div>
 
         <div class="cal__cont" id="cal__cont">

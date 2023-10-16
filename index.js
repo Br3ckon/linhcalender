@@ -7,14 +7,16 @@ let thurBtn = document.getElementById("thursday")
 let friBtn = document.getElementById("friday")
 let satBtn = document.getElementById("saturday")
 let sunBtn = document.getElementById("sunday")
+let dayDiv = document.getElementById("day__cont")
+let resetDiv = document.getElementById("reset__cont")
+let resetBtn = document.getElementById("reset")
+let title = document.getElementById("title")
 
-console.log(tuesBtn, wedBtn,thurBtn,friBtn,satBtn,sunBtn)
+let days = ["Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday","Sunday"]
 
 
 
-
-
- const Monday = ` <h1 class="day__header">Monday</h1>
+ const Monday = ` 
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -58,10 +60,7 @@ console.log(tuesBtn, wedBtn,thurBtn,friBtn,satBtn,sunBtn)
     </div>
 </div>
 `
-
-
-
-const Tuesday =  ` <h1 class="day__header">Tuesday</h1>
+const Tuesday =  ` 
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -105,8 +104,7 @@ const Tuesday =  ` <h1 class="day__header">Tuesday</h1>
     </div>
 </div>
 `
-
-const wednesday = ` <h1 class="day__header">Wednesday</h1>
+const wednesday = ` 
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -150,7 +148,7 @@ const wednesday = ` <h1 class="day__header">Wednesday</h1>
     </div>
 </div>
 `
-const thursday = ` <h1 class="day__header">Thursday</h1>
+const thursday = ` 
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -194,7 +192,7 @@ const thursday = ` <h1 class="day__header">Thursday</h1>
     </div>
 </div>
 `   
-const friday =   ` <h1 class="day__header">Friday</h1>
+const friday =   ` 
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -238,7 +236,7 @@ const friday =   ` <h1 class="day__header">Friday</h1>
     </div>
 </div>
 `  
-const saturday =  ` <h1 class="day__header">Saturday</h1>
+const saturday =  ` 
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -283,7 +281,7 @@ const saturday =  ` <h1 class="day__header">Saturday</h1>
 </div>
 `  
 
-const sunday =    ` <h1 class="day__header">Sunday</h1>
+const sunday =    `
 
 <div class="cal__section__cont">
     <h2 class="time__day">Sang</h2>
@@ -328,33 +326,62 @@ const sunday =    ` <h1 class="day__header">Sunday</h1>
 </div>
 `  
 mondayBtn.addEventListener("click", function(e){
-
+    
     calenderDiv.innerHTML = Monday
+    title.textContent = days[0]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
 })
 
 tuesBtn.addEventListener("click", function(e){
-
+  
     calenderDiv.innerHTML = Tuesday
+    title.textContent = days[1]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
 })
 
 wedBtn.addEventListener("click", function(e){
 
     calenderDiv.innerHTML = wednesday
+    title.textContent = days[2]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
 })
 
 thurBtn.addEventListener("click", function(e){
 
     calenderDiv.innerHTML = thursday
+    title.textContent = days[3]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
 })
 friBtn.addEventListener("click", function(e){
 
     calenderDiv.innerHTML = friday
+    title.textContent = days[4]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
 })
 satBtn.addEventListener("click", function(e){
 
     calenderDiv.innerHTML = saturday
+    title.textContent = days[5]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
 })
 sunBtn.addEventListener("click", function(e){
 
     calenderDiv.innerHTML = sunday
+    title.textContent = days[6]
+    dayDiv.classList.add("none")
+    resetDiv.classList.remove("none")
+})
+
+resetBtn.addEventListener("click", function(e) {
+
+    calenderDiv.innerHTML = ""
+    title.textContent = "Linh's Class Schedule"
+    dayDiv.classList.remove("none")
+    resetDiv.classList.add("none")
 })
